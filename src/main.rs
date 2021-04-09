@@ -85,14 +85,14 @@ fn main() {
                 let sx = size.width as f64;
                 let sy = size.height as f64;
                 let dx = if position.x < sx / 2.0 {
-                    -(position.x + 1.0)
+                    -(position.x + 2.0)
                 } else {
-                    sx - position.x
+                    sx - position.x + 1.0
                 };
                 let dy = if position.y < sy / 2.0 {
-                    -(position.y + 1.0)
+                    -(position.y + 2.0)
                 } else {
-                    sy - position.y
+                    sy - position.y + 1.0
                 };
                 let new = if dx.abs() < dy.abs() {
                     [dx, 0.0]
